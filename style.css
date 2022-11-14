@@ -1,0 +1,58 @@
+
+#circle{
+  width: 700px;
+  height: 650px;
+  border: 6px solid rgb(211, 210, 210);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;  
+}
+
+.size{
+  width: 100px;
+  height: auto;
+}
+
+#unorder{
+  list-style: none;
+  position: relative;
+}
+
+#unorder li{
+  position: relative;
+  text-align: center;
+}
+
+.ring-icon:nth-child(2) {
+  transform: translate(225px, -10px);
+}
+
+.ring-icon:nth-child(3) {
+  transform: translate(285px, 90px);
+}
+
+.ring-icon:nth-child(4) {
+  transform: translate(0px, 250px)
+}
+
+.ring-icon:nth-child(5) {
+  transform: translate(-270px, 20px);
+}
+
+.ring-icon:nth-child(6) {
+  transform: translate(-330px, -320px);
+}
+
+.ring-icon:nth-child(7) {
+  transform: translate(-265px, -630px);
+}
+
+.ring-icon:nth-child(8) {
+  transform: translate(230px, -440px);
+}
+
+.que-code{
+  border: 2px solid black;
+  background-color: cadetblue;
+}
