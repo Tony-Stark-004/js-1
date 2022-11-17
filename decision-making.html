@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>decision-making</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p>Write a program to make a simple calculator using switch statement that takes operator and two numbers from user and print the result after operation.</p>
+    <pre class="que-code">const Calculator = (A, B, C) => 
+      {
+        switch(A) {
+          
+          case '+' : { 
+         return (B + C); 
+          }
+             
+          case '-' : {
+         return (B - C); 
+         }
+         
+          case '*' : {
+         return (B * C);
+          }
+          
+          case '/' : {
+         return (B / C);
+        }
+        }
+          
+      };</pre>
+
+      <h1>Check whether the condition is fulfilled or not?</h1>
+      <p>Write a program that takes a number and prints whether the number is divisible by 6 and 9 or not.</p>
+      <pre class="que-code">const Check_divisibility = (N) => {
+  
+        if(N%6 === 0 && N%9 === 0) {
+          return "Divisible by both";
+        }  
+      
+        else {
+          return "Not Divisible by both";
+        }
+          
+      };</pre>
+
+      <h1>Eligible Voter</h1>
+      <p>You are given an integer A, denoting the age of a person, and your task is to determine whether he/she is eligible to vote or not.</p>
+      <pre class="que-code">const isEligible = (a) => {
+  
+        if(a >= 18) {
+          return "Eligible for Voting";
+        }
+        
+        else{
+          return "Not Eligible for Voting";
+        }
+    };</pre>
+
+    <h1>Find Relation</h1>
+    <p>PrepBuddy wants you to get familiar with various Relational operators. He provides you with two integer values X and Y and asks you to find the relation between them.The relationships between integers X and Y are as follows:
+      <ul>
+        <li>If X < Y, it means that X is smaller than Y.</li>
+        <li>If X > Y, it means that X is greater than Y.</li>
+        <li>If X = Y, it means that X is equal to Y.</li>
+      </ul>
+    </p>
+
+    <pre class="que-code">const findRelation = (x,y) => {
+      if(x < y) {
+        return (x + " is smaller than " + y);
+      }
+      
+      else if(x > y) {
+        return (x + " is greater than " + y);
+      }
+      
+      else{
+        return (x + " is equal to " + y);
+      }
+    };</pre>
+
+    <h1>Find Grades</h1>
+    <p>Your school has the following grading system based upon the marks(M) obtained by a student:</p>
+    <ul>
+      <li>If M <= 10, the grade will be E.</li>
+      <li>If 11 <= M <= 20, the grade will be D.</li>
+      <li>If 21 <= M <= 30, the grade will be C.</li>
+      <li>If 31 <= M <= 40, the grade will be B.</li>
+      <li>If 41 <= M <= 50, the grade will be A.</li>
+    </ul>
+    <pre class="que-code">const findGrades = (a) => {
+      switch(true) {
+        
+        case (a <= 10) : 
+        return "E";
+        
+        case (11 <= a && a <= 20) :
+          return "D";
+          
+          case (21 <= a && a <= 30) :
+          return "C";
+          
+          case (31 <= a && a <= 40) :
+          return "B";
+          
+          case (41 <= a && a <=50) :
+          return "A";
+      }
+  };</pre>
+
+  <h1>Get Value</h1>
+  <pre>You are provided with a table containing some characters and their corresponding values. Your task will be to find the value from the table corresponding to an input character and return it.
+
+    | P or p 	- PrepBytes      	|
+    | Z or z 	- Zenith         	|
+    | E or e 	- Expert Coder   	|
+    | D or d 	- Data Structure 	|</pre>
+
+    <pre class="que-code">const getValue = (a) => {
+ 
+      if(a === 'P' || a === 'p' ) {
+        return 'PrepBytes';
+      } 
+      
+      else if(a === 'Z' || a === 'z' ) {
+        return 'Zenith';
+      }
+      
+      else if(a === 'E' || a === 'e' ) {
+        return 'Expert Coder';
+      } 
+      
+      else if(a === 'D' || a === 'd' ) {
+        return 'Data Structure';
+      } 
+     };</pre>
+
+     <h1>Find the maximum out of three numbers.</h1>
+     <p>Take three numbers and print the largest number among them if all of three are same print −1.</p>
+     <pre class="que-code">const Max_out_of_three = (A,B,C) => {
+   
+      if(A > B && A > C) {
+          return A;
+        }
+      
+      else if(B > A && B > C) {
+        return B;
+      }
+      
+      else if(A === B && B === C) {
+        return "-1"
+      }
+      
+      else {
+        return C;
+      }
+      
+   };
+   </pre>
+
+   <h1>Second Smallest</h1>
+   <p>You are given 3 distinct integers X, Y, and Z, and your task is to find and return the second smallest integer among the three provided integers.</p>
+   <pre class="que-code">const findSndSmallest = (x,y,z) => {
+  
+    if((x<y) && (x>z) || (x<z) && (x>y)) {
+      return x
+    }
+    
+    if((y<x) && (y>z) || (y<z) && (y>x)) {
+      return y
+    }
+    
+    else{
+      return z
+    }
+    
+  };
+  </pre>
+
+  <h1>Check whether the triangle is Acute or Obtuse</h1>
+  <p>Write a program takes takes three angles and checks whether the triangle is acute or obtuse.</p>
+  <pre class="que-code">const Triangle_Check = (A,B,C) => {
+    
+    if(A > 90 || B > 90 || C > 90) { 
+      return "obtuse" }
+      
+      else {return "acute"}
+        
+    };
+    </pre>
+</body>
+</html>
