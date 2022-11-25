@@ -6,7 +6,7 @@
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  position: relative;  
+  position: relative;
 }
 
 .size{
@@ -54,5 +54,5 @@
 
 .que-code{
   border: 2px solid black;
-  background-color: cadetblue;
+  background-color: rgb(234, 248, 170);
 }
