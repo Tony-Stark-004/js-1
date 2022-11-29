@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" type="text/css">
+  <title>string</title>
+</head>
+
+<body>
+  <h1>Count Characters</h1>
+  <p>You are given a string S, and your task is to return an array B(having a size of 2), where B[0]contains the count of character A (uppercase) in string S and B[1]contains the count of character D (uppercase) in string S.</p>
+  <pre class="que-code">const countCharacters = (S) => {
+
+    // S.sort();
+    let B = [];
+  
+     let arr = S.split("");
+     arr.sort();
+  
+    let count = 1;
+    for(let i = 0; i < S.length; i++) {
+        if(arr[i] === "A" || arr[i] === "D") {
+          if(arr[i] === arr[i+1]) {
+            count+=1;
+        }
+        else{
+          B.push(count);
+          count = 1;
+        }
+      }
+    }
+      return B;
+    };
+  </pre>
+
+  <h1>Count the Heads</h1>
+  <p>Tina is given a string  S which contains the first letter of all the student names in her class. She got a curiosity to check how many people have their names starting from the same alphabet. So given a string  S , she decided to write a code that finds out the count of characters that occur more than once in the string.</p>
+  <pre class="que-code">
+    var Count_Occ = (s) => {
+      
+      const alphabets = [];
+      for(let i = 0; i < s.length; i++) {
+        alphabets.push(s.charAt(i));
+      }
+      
+      const repeatedValue = alphabets.filter( (alphabet) =>alphabets.indexOf(alphabet) !== alphabets.lastIndexOf(alphabet) )
+      repeatedValue.sort();
+      let result = ''
+      
+      let count = 1;
+      for(let i = 0; i < repeatedValue.length; i++) {
+        if(repeatedValue[i] === repeatedValue[i+1]) {
+              count+=1;
+      }
+      else{
+        result += repeatedValue[i] + count;
+        count = 1;
+      }
+    }
+      return result;
+    };
+  </pre>
+
+  <h1>Count the Vowels</h1>
+  <p>You are given a string S containing both uppercase and lowercase letters. You need to find out the number of vowels in the given string.</p>
+  <pre class="que-code">var Count_Vowels= (S) => {
+  
+    let count = 0;
+    for(let i = 0; i < S.length; i++) {
+      if(S.charAt(i) === "a" || S.charAt(i) === "e" || S.charAt(i) === "i" || S.charAt(i) === "o" || S.charAt(i) === "u") {
+        count+=1;
+      }
+    } 
+    return count;
+  };
+   </pre>
+
+<h1>Concatenate the Strings</h1>
+<p>You are given two strings S1 and S2 (containing both uppercase and lowercase letters), You need to retrun a string which is the concatenation of both the given strings. </p>
+<pre class="que-code">var Concatenate_Strings = (S1, S2) => 
+  {
+     return S1.concat(S2);   
+  };
+</pre>
+
+<h1>Find Length</h1>
+<p>You are given a string S, and your task is to return the length of the string S</p>
+<pre class="que-code">const findLength = (S) => {
+  
+  let count = 0;
+  for(var length of S) {
+    count +=1;
+  }
+  return count;
+};
+</pre>
+
+<h1>Find the Winner</h1>
+<p>You are given a string S consisting of two letters A and D, where each character represent the winner of N games played between Aditya and Danish, where letter A represents the win of Aditya and letter D represents the win of Danish. 
+You need to find out the that which player wins the maximum number of games or there is a draw between them.</p>
+<pre class="que-code">var Game_Winner = (S) => {
+  
+  let countA = 0; 
+  let countD = 0;
+  for(let character of S) {
+    if(character === "A") {
+      countA+=1;
+    }
+    else if(character === "D") {
+      countD+=1;
+    }
+    
+  }
+    
+    if(countA > countD) {
+      return "Aditya";
+    }
+    
+    else if (countD > countA) {
+      return "Danish";
+    }
+    
+    else {
+      return "Draw";
+    }
+    
+ };
+</pre>
+
+<h1>Join Strings</h1>
+<p>You are given two strings S and P, and your task is to concatenate them and return the concatenated string.</p>
+<pre class="que-code">const joinStrings = (S, P) => 
+  {
+    return S.concat(P);  
+  };
+</pre>
+
+<h1>Plaindrome Check</h1>
+<p>You are given a string S, Your task is to check wether the given string is a Plaindrome or not.</p>
+<p>A Plaindrome is a string, which turnout same when read in reverse direction.</p>
+<p>Example: "naman" is a Palindrome.</p>
+<pre class="que-code">var Palin_Check = (str) => {
+  
+  let isPalindrome = false;
+	for(let i = 0; i < str.length; i++) {
+	  if(str.charAt(i) === str.charAt(str.length-1-i)) {
+	        isPalindrome = true;
+	  }
+	  
+	  else {
+	    isPalindrome = false;
+	  }
+	}
+	
+	if(isPalindrome === true) {
+	  return "True";
+	}
+	
+	else {
+	  return "False";
+	}
+};
+
+</pre>
+
+<h1>Reverse the String</h1>
+<p>
+  You are given a string S, Your task is to Reverse the string. String can contain both upppercase lowercase letters. 
+</p>
+<pre class="que-code">var Reverse_String = (str) => {
+  
+  let reverse = "";
+    for(let i = 0; i < str.length; i++) {
+      reverse = reverse.concat(str.charAt(str.length-1-i));
+    }
+    return reverse;
+};
+</pre>
+
+<h1>Match the Strings</h1>
+<p>You are given two strings S1 and S2, Your task is to print YES if both strings are same else print NO.</p>
+<pre class="que-code">var String_Match = (S1,S2) => {
+  
+  let equal = false;
+  for(let i = 0; i < S1.length; i++) {
+    if(S1.charAt(i) == S2.charAt(i)) {
+      equal = true;
+    }
+    
+    else {
+      equal = false;
+    }
+  } 
+    
+    if(equal === true) {
+      return "YES";
+    }
+    else {
+      return "NO";
+    }
+};
+</pre>
+
+<h1>String Replace</h1>
+<p>You are given a string S, along with a pattern string and a text string. You need to repalce the pattern string in 
+  S to the text string.</p>
+<pre class="que-code">var Replace = (S, pattern , text) => {     
+  
+  return S.replace(pattern, text);
+};
+</pre>
+
+<h1>Split the String</h1>
+<p>You are given a string S, Your task is to split the string with respect to spaces.</p>
+<pre class="que-code">var Split_the_string = (S) => 
+  {
+    return S.split(" ");
+          
+  };
+</pre>
+
+<h1>Count the Vowels and Consonants</h1>
+<p>You are given a string S containing both uppercase and lowercase letters. You need to find out the number of vowels and the number of consonants in the given string.</p>
+<pre class="que-code">var Count_Vowels= (S) => {
+  
+  let vowel = 0;
+ for(let i = 0; i < S.length; i++) {
+   if(S.charAt(i) === "a" || S.charAt(i) === "e" || S.charAt(i) === "i" || S.charAt(i) === "o" || S.charAt(i) === "u") {
+     vowel+=1;
+   }
+ } 
+ return vowel;
+};
+
+
+var Count_Consonants= (S) => {
+  
+   let consonant = 0;
+   for(let i = 0; i < S.length; i++) {
+   if(S.charAt(i) !== "a" && S.charAt(i) !== "e" && S.charAt(i) !== "i" && S.charAt(i) !== "o" && S.charAt(i) !== "u") {
+     consonant+=1;
+   }
+ } 
+ return consonant;   
+};
+</pre>
+
+</body>
+</html>
