@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>problem solving</title>
+</head>
+
+<body>
+
+  <h1>Find the Smaller Angle</h1>
+  <p>PrepBuddy has an analog clock which consists of two hands one for hour and another for minute. She wants to calculate the shorter angle formed between hour and minute hand at any given time.</p>
+  <pre class="que-code">var Minimal_Angle = (h, m) => {
+  
+    let angel = (h*30 + m*1/2) - (m*6) 
+     if(angel < 0){
+       return -(angel);
+     }
+     
+     else if(angel === 360) {
+       return 0;
+     }
+     
+     else {
+       return angel;
+     }
+  };
+</pre>
+
+  <h1>Check whether the year is Leap year or not.</h1>
+  <p>Write a program which takes an year N as input from the user and find out whether the given year is a Leap Year or not.</p>
+  <pre class="que-code">var Check_Leap = (year) => {
+  
+    if(year%4 === 0) {
+       
+       if(year%100 === 0) {
+         
+         if(year%400 === 0) 
+           return "Leap Year";
+      
+         else
+          return "Non Leap Year";
+      }
+       else {
+        return "Leap Year";
+       }
+    }
+   
+   else{
+     return "Non Leap Year";
+   }
+      
+  
+  };
+</pre>
+
+  <h1>Perfect Number Check.</h1>
+  <p>Have you heard of Perfect numbers? If not let me tell you what is it, Perfect Numbers are integers that are equal to the sum of all its divisors except that number itself. Now, You are given an integer N, write a program to check whether the given number is a Perfect Number or not.</p>
+  <pre class="que-code">var Perfect_Check = (N) => {
+  
+    let sum = 0;
+    
+    for(let i = 1; i < N; i++) {
+      if(N%i === 0) {
+       sum+=i;
+    }
+    }
+    
+    if(N === sum) {
+      return "YES";
+    }
+    
+    else {
+      return "NO";
+    }
+           
+   };
+  </pre>
+
+  <h1>Reverse a Number.</h1>
+  <p>Write a program which takes a numebr N as input from the user and You need to reverse the number.</p>
+  <pre class="que-code">var Reverse_Number = (N) => {
+  
+    let reverse = "";
+    let arr = [];
+    
+   while(N) {
+     reverse+= N%10;
+     N = parseInt(N/10);
+   }
+     for(let i = 0; i < reverse.length; i++) {
+     
+     if(reverse.charAt(i) === "0" && arr.length === 0) {
+           
+     }
+     else {
+       arr+=reverse.charAt(i);
+     }
+   }
+     return arr;
+   };
+  </pre>
+
+  <h1>Substring Check.</h1>
+  <p>You are given two strings S1 and S2, you need to check whether the string S1 is a substring of string S2 or not.</p>
+  <pre class="que-code">var Substring_Check = (S1, S2) => {
+  
+    let found = false;
+     let arr = S1.split(" ");
+    for(let i = 0; i < arr.length; i++) {
+       if(arr[i] === S2) {
+         found = true;
+       }
+     }
+    if(found === true) {
+      return "YES"
+    }
+    else {
+      return "NO"
+    }
+  };
+</pre>
+
+</body>
+</html>
